@@ -1,0 +1,43 @@
+############################# A faire ###############################
+%%%%%%% 1ere partie %%%%%%%%%%
+- isalpha
+- isdigit
+- isalnum
+- isascii
+- isprint
+- strlen
+- memset
+- bzero
+- memcpy
+- memmove
+- strlcpy
+- strlcat
+- toupper
+- tolower
+- strchr
+- strrchr
+- strncmp
+- memchr
+- memcmp
+- strnstr
+- atoi
+- calloc
+- strdup
+
+%%%%%%%%% 2eme partie %%%%%%%%%
+NOTE : Certaines fonctions de cette seconde partie peuvent faciliter l'ecriture de celles demandees dans la partie 1.
+- substr
+- strjoin
+- strtrim
+- split
+- itoa
+- strmapi
+- striteri
+- putchar_fd
+- putstr_fd
+- putendl_fd
+- putnbr_fd
+
+%%%%%%%%% 3eme partie %%%%%%%%%%
+- MAKEFILE (NAME, all, clean, fclean, re)
+- libft.h
