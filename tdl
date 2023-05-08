@@ -1,13 +1,13 @@
 ############################# A faire ###############################
 ####### 1ere partie #######
-NOTE : Apres avoir fini et teste une fonction avec celle deja existante mettre un X dans tdl (x1,x2 etc correspond au nombre de filtrage effeffectue
+NOTE : Apres avoir fini et teste une fonction avec celle deja existante mettre un X dans tdl (x1,x2 etc correspond au nombre de filtrage effectue, R signifie la nécessité de vérifier la conformité de ma fonction par rapport à celle de base).
  
 - isalpha X
 - isdigit X
 - isalnum X
-- isascii R
+- isascii X
 - isprint R
-- strlen R
+- strlen  R
 - memset
 - bzero
 - memcpy
