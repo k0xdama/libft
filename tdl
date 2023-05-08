@@ -5,9 +5,9 @@ NOTE : Apres avoir fini et teste une fonction avec celle deja existante mettre u
 - isalpha X
 - isdigit X
 - isalnum X
-- isascii
-- isprint
-- strlen
+- isascii R
+- isprint R
+- strlen R
 - memset
 - bzero
 - memcpy
