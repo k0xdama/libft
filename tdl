@@ -7,18 +7,18 @@ NOTE : Apres avoir fini et teste une fonction avec celle deja existante mettre u
 - isalnum X
 - isascii X
 - isprint R
-- strlen  R
+- strlen  X
 - memset
 - bzero
 - memcpy
 - memmove
-- strlcpy
-- strlcat
-- toupper
-- tolower
-- strchr
-- strrchr
-- strncmp
+- strlcpy X
+- strlcat R
+- toupper X
+- tolower X
+- strchr (se renseigner)
+- strrchr (se renseigner)
+- strncmp X
 - memchr
 - memcmp
 - strnstr
