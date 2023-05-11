@@ -1,14 +1,21 @@
-int ft_strlen(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pmateo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/11 04:56:21 by pmateo            #+#    #+#             */
+/*   Updated: 2023/05/11 05:23:44 by pmateo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+unsigned long int	ft_strlen(const char *str)
 {
-    int     i;
+	int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
-
-/*penser à tester la méthode s* = str return(s - str)*/
-/*cas particulier si str est NULL ?*/

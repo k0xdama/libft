@@ -1,0 +1,2 @@
+C Library Reference
+https://www.qnx.com/developers/docs/7.1/#com.qnx.doc.neutrino.lib_ref/topic/about.html
