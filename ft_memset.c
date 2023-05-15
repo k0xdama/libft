@@ -1,11 +1,11 @@
-void	*memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char *ps;
 	unsigned char toput;
 	size_t	i; /*tester sans, en décrementant n dans la boucle*/
 
-	ps = s;
-	toput = c;
+	ps = (unsigned char *)s;
+	toput = (unsigned char *)c;
 	i = 0;
 	while (i < n)
 	{
