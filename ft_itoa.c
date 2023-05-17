@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void    reversestr(char str/*[?]*/, int len)
+void    reversestr(char *str, int len)
 {
     int     i;
     int     j;
@@ -23,11 +23,23 @@ void    reversestr(char str/*[?]*/, int len)
     while (i < j)
     {
         tmp = str[i];
+	str[i] = str[j];
+	str[j] = tmp;
+	i++;
+	j--;
     }
 }
 
 
-char    *itoa(int n)
+/*char    *itoa(int n)
 {
     
+}*/
+
+int	main(void)
+{
+	char str[] = "waterlow est cool";
+	int len = 17;
+	reversestr(str, len);
+	printf("%s\n", str);
 }
