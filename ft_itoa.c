@@ -30,16 +30,55 @@ void    reversestr(char *str, int len)
     }
 }
 
-
-/*char    *itoa(int n)
+int	isneg(int n)
 {
-    
-}*/
+	int	isneg;
+	int	nb;
 
+	nb = n;
+	isneg = 0;
+	if (nb < 0)
+	       return (isneg += 1);
+	return (0);	
+}
+
+char	*ft_itoa(int n)
+{
+	int	i;
+	int	count;
+	int	nb;
+	int	d;
+
+	nb = n;
+	nb = nb * -1;
+	count = 0;
+	while (nb != 0)
+	{
+		nb /= 10;
+		count++;
+	}
+	if (isneg(n) == 1)
+		count = count + 1;
+	char	str[count + 1];;
+
+	i = 0;
+	while (nb != 0)
+	{
+		d = nb % 10;
+		str[i] = d + 48;
+		nb = nb / 10;
+		i++;
+	}
+	if (isneg(n) == 1)
+		str[i++] = '-';
+	str[i] = '\0';
+	reversestr(str, i);
+	return (str);
+
+}
 int	main(void)
 {
-	char str[] = "waterlow est cool";
-	int len = 17;
-	reversestr(str, len);
-	printf("%s\n", str);
+	int nb = -4200;
+	printf("ma fonction retourne : %s\n", ft_itoa(nb));
+	return (0);
 }
