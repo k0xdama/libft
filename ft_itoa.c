@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void    reversestr(char *str, int len)
 {
@@ -32,14 +33,9 @@ void    reversestr(char *str, int len)
 
 int	isneg(int n)
 {
-	int	isneg;
-	int	nb;
-
-	nb = n;
-	isneg = 0;
-	if (nb < 0)
-	       return (isneg += 1);
-	return (0);	
+	if (n < 0)
+	       return (1);
+	return (0);
 }
 
 char	*ft_itoa(int n)
@@ -48,19 +44,20 @@ char	*ft_itoa(int n)
 	int	count;
 	int	nb;
 	int	d;
+	int	size;
 
 	nb = n;
-	nb = nb * -1;
 	count = 0;
-	while (nb != 0)
+	while (n != 0)
 	{
-		nb /= 10;
+		n /= 10;
 		count++;
 	}
-	if (isneg(n) == 1)
-		count = count + 1;
-	char	str[count + 1];;
-
+	size = count + isneg(nb) + 1;
+	char	*str = (char*)malloc(size * sizeof(char));
+	if (isneg(nb) == 1)
+                str[size - 2] = '-';
+	nb = nb * -1;
 	i = 0;
 	while (nb != 0)
 	{
@@ -69,10 +66,8 @@ char	*ft_itoa(int n)
 		nb = nb / 10;
 		i++;
 	}
-	if (isneg(n) == 1)
-		str[i++] = '-';
-	str[i] = '\0';
-	reversestr(str, i);
+	str[i + 1] = '\0';
+	reversestr(str, i + 1);
 	return (str);
 
 }
