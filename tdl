@@ -24,15 +24,15 @@ NOTE : Apres avoir fini et teste une fonction avec celle deja existante mettre u
 - strnstr
 - atoi x
 - calloc
-- strdup
+- strdup R
 
 %%%%%%%%% 2eme partie %%%%%%%%%
 NOTE : Certaines fonctions de cette seconde partie peuvent faciliter l'ecriture de celles demandees dans la partie 1.
-- substr
-- strjoin
-- strtrim
+- substr R
+- strjoin R
+- strtrim R
 - split
-- itoa
+- itoa R
 - strmapi
 - striteri
 - putchar_fd

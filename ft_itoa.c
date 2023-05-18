@@ -54,7 +54,9 @@ char	*ft_itoa(int n)
 		count++;
 	}
 	size = count + isneg(nb) + 1;
-	char	*str = (char*)malloc(size * sizeof(char));
+	char	*str = malloc(sizeof(size));
+	if (str == NULL)
+		return(NULL);
 	if (isneg(nb) == 1)
                 str[size - 2] = '-';
 	nb = nb * -1;
