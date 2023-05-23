@@ -10,4 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.>
+#include <stdio.h>
+
+int	count_substr(char const *s, char c)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while(s[i] != '\0')
+	{
+		if (s[i] = c)
+		{
+			j++;
+			i++;
+		}
+		else
+			i++;
+	}
+	return (j);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	 char	**tab;
+
+	 tab = malloc(sizeof(counst_substr(s, c) + 1));
+
+}
+
+int	main(void)
+{
+	char *s = "j'ai des hemoroides";
+	char *c = " ";
+	printf("ft_split renvoie %s", ft_split(s, c));
+}
