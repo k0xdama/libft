@@ -41,9 +41,9 @@ char	**ft_split(char const *s, char c)
 
 }
 
-int	main(void)
-{
-	char *s = "j'ai des hemoroides";
-	char *c = " ";
-	printf("ft_split renvoie %s", ft_split(s, c));
-}
+// int	main(void)
+// {
+// 	char *s = "j'ai des hemoroides";
+// 	char *c = " ";
+// 	printf("ft_split renvoie %s", ft_split(s, c));
+// }

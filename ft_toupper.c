@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pmateo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 04:56:56 by pmateo            #+#    #+#             */
-/*   Updated: 2023/05/11 04:57:06 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/05/24 19:37:02 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-    if (c > 96 && c < 123)
-        return (c - 32);
-    else
-        return (c);
+	if (c > 96 && c < 123)
+		return (c - 32);
+	else
+		return (c);
 }

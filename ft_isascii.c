@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pmateo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 21:16:31 by pmateo            #+#    #+#             */
-/*   Updated: 2023/05/05 21:36:54 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/05/24 18:02:25 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	ft_isascii(int c)
 		return (0);
 }
 
-int	main(void)
-{
-	char	c;
+// int	main(void)
+// {
+// 	char	c;
 
-	c = 'Ç';
-	printf("ma fonction retourne %d\n", ft_isascii(c));
-	printf("la fonction de base retourne %d\n", isascii(c));
-}
+// 	c = 'Ç';
+// 	printf("ma fonction retourne %d\n", ft_isascii(c));
+// 	printf("la fonction de base retourne %d\n", isascii(c));
+// }
