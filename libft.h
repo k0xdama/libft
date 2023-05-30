@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: u4s2e0r <u4s2e0r@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/28 22:11:19 by u4s2e0r           #+#    #+#             */
+/*   Updated: 2023/05/28 22:11:20 by u4s2e0r          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -28,7 +40,7 @@ void    *ft_memchr(const void *mb, int c, size_t n);
 int ft_memcmp(const void *mb1, const void *mb2, size_t n);
 char    *ft_strnstr(const char *str, const char *tofind, size_t n);
 int ft_atoi(char *str);
-void    *calloc(size_t nmb, size_t n);
+void    *ft_calloc(size_t nmb, size_t n);
 char    *ft_strdup(const char *str);
 char    *ft_substr(char const *s, unsigned int start, size_t n);
 char    *ft_strjoin(char const *s1, char const *s2);
