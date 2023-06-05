@@ -28,20 +28,28 @@ NOTE : Apres avoir fini et teste une fonction avec celle deja existante mettre u
 
 %%%%%%%%% 2eme partie %%%%%%%%%
 NOTE : Certaines fonctions de cette seconde partie peuvent faciliter l'ecriture de celles demandees dans la partie 1.
-- substr (where it is ????)
+- substr X
 - strjoin RN
 - strtrim R (plus de 25 lignes)
 - split
 - itoa R (plus de 25 lignes et trop de variables)
-- strmapi
-- striteri
+- strmapi X
+- striteri X
 - putchar_fd X
 - putstr_fd X
 - putendl_fd X
 - putnbr_fd X
 
 %%%%%%%%%%%%%%% BONUS %%%%%%%%%%%%%%%%%%%%%%
-
+- ft_lstnew
+- ft_lstadd_front
+- ft_lstsize
+- ft_lstlast
+- ft_lstadd_back
+- ft_lstdelone
+- ft_lstclear
+- ft_lstiter
+- ft_lstmap
 
 %%%%%%%%% 3eme partie %%%%%%%%%%
 - MAKEFILE (NAME, all, clean, fclean, re)

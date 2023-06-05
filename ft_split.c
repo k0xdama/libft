@@ -13,6 +13,44 @@
 #include <stdlib.>
 #include <stdio.h>
 
+char	*ft_substr(const char *src, unsigned int start, size_t len)
+{
+	int	size;
+	int	i;
+	int	j;
+	
+	size = len;
+	i = start - 1;;
+	j = 0;
+	char *str = malloc(size * sizeof(char));
+	while (j < size - 1)
+	{
+		str[j] = src[i];
+		j++;
+		i++;
+	}
+	str[j] = '\0';
+	return (str);
+}
+
+char	*ft_strchr(const char *str, int c)
+{
+	char	cc;
+	int		i;
+
+	cc = c + '0';
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == cc)
+			return (str[i]);
+		else
+			i++;
+	}
+	if (str[i] == '\0')
+		return (NULL);
+}
+
 int	count_substr(char const *s, char c)
 {
 	int	i;
@@ -35,15 +73,26 @@ int	count_substr(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	 char	**tab;
+	char	**tab;
+	size_t	size;
+	size_t	i;
 
-	 tab = malloc(sizeof(counst_substr(s, c) + 1));
+	if (!s)
+		return (NULL);
+	size = count_substr(s, c);
+	tab = malloc((size + 1) * sizeof(char **));
+	if (!tab)
+		return (NULL);
+	tab[size] = NULL;
 
 }
 
-// int	main(void)
-// {
-// 	char *s = "j'ai des hemoroides";
-// 	char *c = " ";
-// 	printf("ft_split renvoie %s", ft_split(s, c));
-// }
+int	main(void)
+{
+	char *s = "j'ai des hemoroides";
+	char *c = " ";
+	char **tab = ft_split(s, c);
+	int i = 0;
+	while (tab[i])
+		printf("%s\n", tab[i++]);
+}
