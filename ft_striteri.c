@@ -6,13 +6,13 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 15:04:33 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/05 16:27:57 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/06/05 17:48:52 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *str, void (*f)(unsigned int, char*))
+void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char*))
 	{
 		(*f)(i, &str[i]);
 		i++;
-	}	
+	}
 }
 // static void	ft_reversechar(unsigned int i, char *c)
 // {

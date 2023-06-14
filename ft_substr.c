@@ -3,40 +3,75 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u4s2e0r <u4s2e0r@student.42.fr>            +#+  +:+       +#+        */
+/*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 10:54:57 by u4s2e0r           #+#    #+#             */
-/*   Updated: 2023/05/30 10:55:59 by u4s2e0r          ###   ########.fr       */
+/*   Updated: 2023/06/15 00:48:54 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *src, unsigned int start, size_t len)
+size_t	ft_strlen(const char *str)
 {
-	int	size;
 	int	i;
-	int	j;
-	
-	size = len;
-	i = start - 1;;
-	j = 0;
-	char *str = malloc(size * sizeof(char));
-	while (j < size - 1)
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+{
+	unsigned int	i;
+
+	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < size - 1)
 	{
-		str[j] = src[i];
-		j++;
+		dest[i] = src[i];
 		i++;
 	}
-	str[j] = '\0';
-	return (str);
+	dest[i] = '\0';
+	return (ft_strlen(src));
+}
+
+char	*ft_substr(const char *src, unsigned int start, size_t len)
+{
+	char	*str;
+	size_t	strlen;
+	
+	if (!src)
+		return(NULL);
+	if (start > ft_strlen(src))
+	{
+		str = malloc(sizeof(char));
+		if (!str)
+			return (NULL);
+		str[0] = '\0';
+		return (str);
+	}
+	else
+	{
+		strlen = len;
+		if (ft_strlen(src + start) < len)
+			strlen = ft_strlen(src + start);
+		str = malloc((strlen + 1) * sizeof(char));
+		if (!str)
+			return (NULL);
+		ft_strlcpy(str, src + start, strlen + 1);
+		return (str);
+	}
+	
 }
 
 // int	main(void)
 // {
-// 	const char *src = "machinbiduletruc";
-// 	int start = 13;
-// 	int len = 5;
+// 	const char *src = "extraismoideca";
+// 	int start = 7;
+// 	int len = 3;
 // 	printf("la fonction ft_substr renvoie %s\n", ft_substr(src, start, len));
 // 	return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:32:13 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/05 17:11:13 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/06/05 17:49:07 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*outstr;
 	size_t	i;
-	
+
 	i = 0;
 	if (s == NULL || *f == NULL)
 		return (NULL);
 	outstr = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if(!outstr)
+	if (!outstr)
 		return (NULL);
 	while (s[i])
 	{

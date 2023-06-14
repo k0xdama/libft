@@ -6,7 +6,7 @@
 #    By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/28 22:11:27 by u4s2e0r           #+#    #+#              #
-#    Updated: 2023/06/05 11:41:46 by pmateo           ###   ########.fr        #
+#    Updated: 2023/06/14 22:14:08 by pmateo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,8 @@ BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 
 OBJ    = $(SRC:.c=.o)
 
+OBJ_BONUS	= $(BONUS:.c=o)
+
 LIBFT  = libft.a
 
 all: $(LIBFT)
@@ -32,11 +34,16 @@ all: $(LIBFT)
 $(LIBFT): $(OBJ)
 	$(AR) $@ $(OBJ)
 
-%.o: %.CC
-	$(CC) $(CFLAGS) -c $< -o $@
+bonus: $(OBJ_BONUS)
+	$(AR) $@ $(OBJ_BONUS)
+	
+
+# %.o: %.CC
+# 	$(CC) $(CFLAGS) -c $< -o $@
+# Utile ? A quoi ?
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	rm -f $(LIBFT)

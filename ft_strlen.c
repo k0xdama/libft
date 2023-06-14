@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 04:56:21 by pmateo            #+#    #+#             */
-/*   Updated: 2023/05/24 19:22:08 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/06/14 23:23:57 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,16 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
 		i++;
 	return (i);
+}
+
+int	main(void)
+{
+	char *str = "extraismoi";
+	printf("ft_strlen renvoie %ld", ft_strlen(str));
 }

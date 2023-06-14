@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_substr(const char *src, unsigned int start, size_t len)
 {
@@ -19,8 +18,8 @@ char	*ft_substr(const char *src, unsigned int start, size_t len)
 	int	i;
 	int	j;
 	
-	size = len;
-	i = start - 1;;
+	size = len + 1;
+	i = start;
 	j = 0;
 	char *str = malloc(size * sizeof(char));
 	while (j < size - 1)
@@ -35,20 +34,19 @@ char	*ft_substr(const char *src, unsigned int start, size_t len)
 
 char	*ft_strchr(const char *str, int c)
 {
-	char	cc;
 	int		i;
 
-	cc = c + '0';
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == cc)
-			return (str[i]);
+		if (str[i] == c)
+			return ((char *)str + i);
 		else
 			i++;
 	}
-	if (str[i] == '\0')
-		return (NULL);
+	if (str[i] == c)
+		return ((char *)str + i);
+	return (NULL);
 }
 
 int	count_substr(char const *s, char c)
@@ -84,7 +82,10 @@ char	**ft_split(char const *s, char c)
 	if (!tab)
 		return (NULL);
 	tab[size] = NULL;
-
+	while (tab[i])
+	{
+		tab[i] = ft_substr()
+	}
 }
 
 int	main(void)
