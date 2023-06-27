@@ -6,37 +6,37 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 10:54:57 by u4s2e0r           #+#    #+#             */
-/*   Updated: 2023/06/15 00:48:54 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/06/18 17:19:29 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	int	i;
+// size_t	ft_strlen(const char *str)
+// {
+// 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+// 	i = 0;
+// 	while (str[i] != '\0')
+// 		i++;
+// 	return (i);
+// }
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
-{
-	unsigned int	i;
+// unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+// {
+// 	unsigned int	i;
 
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (src[i] != '\0' && i < size - 1)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (ft_strlen(src));
-}
+// 	i = 0;
+// 	if (size == 0)
+// 		return (ft_strlen(src));
+// 	while (src[i] != '\0' && i < size - 1)
+// 	{
+// 		dest[i] = src[i];
+// 		i++;
+// 	}
+// 	dest[i] = '\0';
+// 	return (ft_strlen(src));
+// }
 
 char	*ft_substr(const char *src, unsigned int start, size_t len)
 {
@@ -64,7 +64,6 @@ char	*ft_substr(const char *src, unsigned int start, size_t len)
 		ft_strlcpy(str, src + start, strlen + 1);
 		return (str);
 	}
-	
 }
 
 // int	main(void)

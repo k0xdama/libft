@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:32:13 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/05 17:49:07 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/06/26 22:42:23 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		outstr[i] = (*f)(i, s[i]);
 		i++;
 	}
+	outstr[i] = '\0';
 	return (outstr);
 }
 // static char	ft_reversechar(unsigned int i, char c)

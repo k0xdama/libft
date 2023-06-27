@@ -23,7 +23,7 @@ NOTE : Apres avoir fini et teste une fonction avec celle deja existante mettre u
 - memcmp RN
 - strnstr XN
 - atoi XN
-- calloc
+- calloc R
 - strdup RN
 
 %%%%%%%%% 2eme partie %%%%%%%%%
@@ -31,7 +31,7 @@ NOTE : Certaines fonctions de cette seconde partie peuvent faciliter l'ecriture 
 - substr X
 - strjoin RN
 - strtrim R (plus de 25 lignes)
-- split
+- split X
 - itoa R (plus de 25 lignes et trop de variables)
 - strmapi X
 - striteri X
@@ -41,11 +41,11 @@ NOTE : Certaines fonctions de cette seconde partie peuvent faciliter l'ecriture 
 - putnbr_fd X
 
 %%%%%%%%%%%%%%% BONUS %%%%%%%%%%%%%%%%%%%%%%
-- ft_lstnew
-- ft_lstadd_front
-- ft_lstsize
-- ft_lstlast
-- ft_lstadd_back
+- ft_lstnew X
+- ft_lstadd_front X
+- ft_lstsize X
+- ft_lstlast X
+- ft_lstadd_back X
 - ft_lstdelone
 - ft_lstclear
 - ft_lstiter
