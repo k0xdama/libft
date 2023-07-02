@@ -6,51 +6,44 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 02:19:29 by pmateo            #+#    #+#             */
-/*   Updated: 2023/05/24 19:33:57 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/01 20:16:01 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-unsigned int	ft_strlen(char *str)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
+	size_t	ldest;
 
 	i = 0;
 	j = 0;
-	if (size == 0)
-		return (ft_strlen(dest) + ft_strlen(src));
 	while (dest[i] != '\0')
 		i++;
-	while (src[j] != '\0' && i <= (size - 1))
+	ldest = i;
+	if (size <= i)
+		return (ft_strlen(src) + size);
+	while (src[j] != '\0' && i < (size - 1))
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
 	dest[i] = '\0';
-	return (ft_strlen(dest));
+	if (size <= ldest)
+		return (ft_strlen(src) + size);
+	else
+		return (ft_strlen(src) + ldest);
 }
-// strlcat devrait retourner la taille initial de dest...
-// et il est bien possible de la tester, l'argument bsd vient apres le fichier
 
 // int	main(void)
 // {
-// 	char src[] = "World";
-// 	char dest[255] = "Hello";
-// 	printf("ma fonction renvoie %d\n", ft_strlcat(dest, src, 15));
+// 	char *src = "AAAAAAAAA";
+// 	char dest[30];
+// 	ft_memset(dest, 0, 30);
+// 	ft_memset(dest, 'B', 4);
+// 	printf("ma fonction renvoie %ld\n", ft_strlcat(dest, src, 6));
 // 	printf("la nouvelle chaine dest est %s\n", dest);
 // }

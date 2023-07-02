@@ -1,48 +1,29 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	len(const char *s1)
-{
-	int	i;
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-void	cpy(const char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		s2[i] = s1[i];
-		i++;
-	}
-	s2[i] = '\0';
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
 	size_t	size;
+	char	*s2;
 
-	size = len(s1) + 1;
-	char *s2 = malloc(sizeof(size));
+	size = ft_strlen(s1) + 1;
+	s2 = malloc(size * sizeof(char));
 	if (s2 == NULL)
 		return (NULL);
-	cpy(s1, s2);
+	ft_strlcpy(s2, s1, size);
 	return (s2);
 }
 
-int	main(void)
-{
-	char *str = "copiemoi";
-	printf("ma version renvoie %s\n", ft_strdup(str));
-	printf("la vraie version renvoie %s", strdup(str));
-	return (0);
-}
-
+// int	main(void)
+// {
+// 	char *str = "copiemoi";
+// 	printf("ma version renvoie %s\n", ft_strdup(str));
+// 	printf("la vraie version renvoie %s", strdup(str));
+// 	return (0);
+// }
+// int	main(void)
+// {
+// 	char *s = ft_strdup((char*)"coucou");
+// 	printf("%s\n", s);
+// 	s = strdup((char *)"coucou");
+// 	printf("%s\n", s);
+// }

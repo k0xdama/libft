@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u4s2e0r <u4s2e0r@student.42.fr>            +#+  +:+       +#+        */
+/*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 18:41:27 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/02 02:18:07 by u4s2e0r          ###   ########.fr       */
+/*   Updated: 2023/07/01 20:28:55 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char    *ft_strnstr(const char *str, const char *tofind, size_t n)
 
 	i = 0;
 	j = 0;
-	if(!tofind)
+	if(!tofind || !tofind[0])
 		return ((char *)str);
 	while (str[i] != '\0' && i < n)
 	{
@@ -41,4 +41,8 @@ char    *ft_strnstr(const char *str, const char *tofind, size_t n)
 // 	const char *str = "trouvemoi";
 // 	const char *tofind = "moi";
 // 	printf("ft_strnstr retourne %s", ft_strnstr(str, tofind, 9));
+// }
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strnstr("", "", 0));
 // }

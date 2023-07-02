@@ -6,11 +6,13 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 00:01:42 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/27 16:17:07 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/06/29 04:48:09 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *calloc(size_t num, size_t size)
+#include "libft.h"
+
+void *ft_calloc(size_t num, size_t size)
 {
 	void	*buffer;
 	size_t i;
@@ -33,7 +35,5 @@ void *calloc(size_t num, size_t size)
 		((unsigned char *)buffer)[i] = 0;
 		i++;
 	}
-	return (buff);
+	return (buffer);
 }
-
-// int	main(void)

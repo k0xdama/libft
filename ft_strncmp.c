@@ -6,18 +6,27 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 05:33:42 by pmateo            #+#    #+#             */
-/*   Updated: 2023/05/24 19:41:58 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/01 18:05:56 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
+	if (!n)
+		return (0);
 	while (s1[i] == s2[i] && i < (n - 1))
 		i++;
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+
+// int	main(void)
+// {
+// 	printf("%d\n", ft_strncmp("t", "", 0));
+// 	printf("%d\n", ft_strncmp("", "1", 0));
+// 	printf("%d\n", ft_strncmp("1", "", 0));
+// }

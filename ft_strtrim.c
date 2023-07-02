@@ -6,32 +6,24 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 20:13:42 by pmateo            #+#    #+#             */
-/*   Updated: 2023/05/24 20:18:00 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/01 22:47:17 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strcpy(char const *src, unsigned int start, unsigned int end)
+static char	*cpy(char const *src, int start, int end)
 {
 	int		i;
 	size_t	size;
 	char	*dest;
 
 	i = 0;
-	size = end - start;
+	size = end - start + 1;
 	dest = malloc(sizeof(char) * (size + 1));
-	while (start < end)
+	if (!dest)
+		return (NULL);
+	while (start <= end)
 	{
 		dest[i] = src[start];
 		i++;
@@ -41,12 +33,11 @@ char	*ft_strcpy(char const *src, unsigned int start, unsigned int end)
 	return (dest);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int	find_start(const char *s1, const char *set)
 {
-	unsigned int	start;
-	unsigned int	i;
-	unsigned int	j;
-
+	int	i;
+	int j;
+	
 	i = 0;
 	j = 0;
 	while (set[j] != '\0')
@@ -59,12 +50,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			j++;
 	}
-	start = i;
-	i = ft_strlen(s1) - 1;
+	return (i);
+}
+
+static int	find_end(const char *s1, const char *set, int start, int lens1)
+{
+	int	i;
+	int	j;
+
+	i = lens1;
 	j = 0;
-	while (set[j] != '\0')
+	while (set[j] != '\0' && start < i)
 	{
-		if (s1[i] == set[j])
+		if(s1[i] == set[j])
 		{
 			j = 0;
 			i--;
@@ -72,7 +70,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			j++;
 	}
-	return (ft_strcpy(s1, start, i + 1));
+	return (i);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int	start;
+	int	end;
+
+	start = find_start(s1, set);
+	end = find_end(s1, set, start, (ft_strlen(s1) - 1));
+	return (cpy(s1, start, end));
 }
 
 // int	main(void)
@@ -82,4 +90,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 	char *res = ft_strtrim(s1, set);
 // 	printf("ft_strtrim renvoie : %s\n", res);
 // 	free(res);
+// }
+// int	main(void)
+// {
+// 	char *s = ft_strtrim("", "123");
+// 	printf("%s\n", s);
 // }
