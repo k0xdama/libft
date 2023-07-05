@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 12:38:05 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/27 13:02:00 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/02 22:04:38 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del((*lst)->content);
-	free(*lst);
+	del((lst)->content);
+	free(lst);
 }

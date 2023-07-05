@@ -6,7 +6,7 @@
 #    By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/27 22:38:51 by pmateo            #+#    #+#              #
-#    Updated: 2023/06/29 00:36:30 by pmateo           ###   ########.fr        #
+#    Updated: 2023/07/02 21:42:37 by pmateo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 
 OBJ    = ${SRC:.c=.o}
 
-OBJ_BONUS	= ${BONUS:.c=o}
+OBJ_BONUS	= ${BONUS:.c=.o}
 
 NAME  = libft.a
 

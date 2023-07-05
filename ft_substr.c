@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 10:54:57 by u4s2e0r           #+#    #+#             */
-/*   Updated: 2023/07/01 19:01:27 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/02 19:07:06 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 // 	return (ft_strlen(src));
 // }
 
-char	*ft_substr(const char *src, size_t start, size_t len)
+char	*ft_substr(const char *src, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	strlen;

@@ -12,61 +12,7 @@
 
 #include "libft.h"
 
-// size_t	ft_strlen(const char *str)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (str[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
-
-// unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
-// {
-// 	unsigned int	i;
-
-// 	i = 0;
-// 	if (size == 0)
-// 		return (ft_strlen(src));
-// 	while (src[i] != '\0' && i < size - 1)
-// 	{
-// 		dest[i] = src[i];
-// 		i++;
-// 	}
-// 	dest[i] = '\0';
-// 	return (ft_strlen(src));
-// }
-
-// char	*ft_substr(const char *src, unsigned int start, size_t len)
-// {
-// 	char	*str;
-// 	size_t	strlen;
-	
-// 	if (!src)
-// 		return(NULL);
-// 	if (start > ft_strlen(src))
-// 	{
-// 		str = malloc(sizeof(char));
-// 		if (!str)
-// 			return (NULL);
-// 		str[0] = '\0';
-// 		return (str);
-// 	}
-// 	else
-// 	{
-// 		strlen = len;
-// 		if (ft_strlen(src + start) < len)
-// 			strlen = ft_strlen(src + start);
-// 		str = malloc((strlen + 1) * sizeof(char));
-// 		if (!str)
-// 			return (NULL);
-// 		ft_strlcpy(str, src + start, strlen + 1);
-// 		return (str);
-// 	}
-// }
-
-int	count_substr(char const *s, char c)
+static int	count_substr(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -86,7 +32,7 @@ int	count_substr(char const *s, char c)
 	return (j);
 }
 
-void	extract_and_fill(char **tab, char const *s, char c)
+static void	extract_and_fill(char **tab, char const *s, char c)
 {
 	char **ptab;
 	char const *tmp;
@@ -127,10 +73,12 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char *s = "j'ai des hemorroides";
-// 	char c = 32;
+// 	char *s = "";
+// 	char c = 'z';
 // 	char **tab = ft_split(s, c);
 // 	int i = 0;
 // 	while (tab[i])
 // 		printf("%s\n", tab[i++]);
+// 	if (!tab[0])
+// 		printf("NULL\n");
 // }

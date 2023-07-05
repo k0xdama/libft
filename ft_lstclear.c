@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 13:08:36 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/27 14:33:28 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/02 22:15:47 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	next;
+	t_list	*next;
 
 	while (*lst != NULL)
 	{
-		next = *lst->next;
-		del(*lst->content);
+		next = (*lst)->next;
+		del((*lst)->content);
 		free(*lst);
 		*lst = next;
 	}

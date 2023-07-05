@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 22:04:05 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/26 22:22:34 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/02 22:00:53 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		t_list	*tmp;
 
-		*tmp = ft_lstlast(*lst);
-		*tmp->next = new;
+		tmp = ft_lstlast(*lst);
+		tmp->next = new;
 	}
 }

@@ -6,13 +6,13 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 02:56:20 by pmateo            #+#    #+#             */
-/*   Updated: 2023/05/24 20:34:57 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/02 21:25:57 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	reversestr(char *str, int len)
+static void	reversestr(char *str, int len)
 {
 	int			i;
 	int			j;
@@ -30,7 +30,42 @@ void	reversestr(char *str, int len)
 	}
 }
 
-int	isneg(int n)
+static void	fill(char *str, long ln, int n)
+{
+	int digit;
+	int	i;
+	
+	i = 0;
+	if (ln == 0)
+		str[0] = '0';
+	while (ln != 0)
+	{
+		digit = ln % 10;
+		str[i] = digit + 48;
+		ln = ln / 10;
+		i++;
+	}
+	if (n < 0)
+		str[i] = '-';
+}
+
+static int	digit_count(long ln)
+{
+	int	count;
+	
+	count = 0;
+
+	if(ln == 0)
+		count = 1;
+	while (ln)
+	{
+		ln /= 10;
+		count++;
+	}
+	return (count);
+}
+
+static int	isneg(int n)
 {
 	if (n < 0)
 		return (1);
@@ -39,37 +74,21 @@ int	isneg(int n)
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		count;
-	int		nb;
-	int		d;
+	long	ln;
 	int		size;
 	char	*str;
 
-	nb = n;
-	count = 0;
-	while (n != 0)
-	{
-		n /= 10;
-		count++;
-	}
-	size = count + isneg(nb) + 1;
-	str = malloc(sizeof(size));
+	ln = n;
+	if (ln < 0)
+		ln *= -1;
+	size = digit_count(ln) + isneg(n);
+	str = malloc((size + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	if (isneg(nb) == 1)
-			str[size - 2] = '-';
-	nb = nb * -1;
-	i = 0;
-	while (nb != 0)
-	{
-		d = nb % 10;
-		str[i] = d + 48;
-		nb = nb / 10;
-		i++;
-	}
-	str[i + 1] = '\0';
-	reversestr(str, i + 1);
+	fill(str, ln, n);
+	if (str[0] != '0' || size != 1)
+		reversestr(str, size);
+	str[size] = '\0';
 	return (str);
 }
 // int	main(void)
@@ -77,4 +96,9 @@ char	*ft_itoa(int n)
 // 	int nb = -4200;
 // 	printf("ma fonction retourne : %s\n", ft_itoa(nb));
 // 	return (0);
+// }
+// #include <limits.h>
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(543000));
 // }
