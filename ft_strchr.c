@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 05:33:59 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/01 17:40:51 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/08 19:37:44 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ char	*ft_strchr(const char *str, int c)
 
 // int	main(void)
 // {
-// 	int c = 't';
-// 	char *str = "carapute";
+// 	int c = '\n';
+// 	char *str = "ado\nA qui l'on pr";
 // 	printf("ma fonction retourne %s\n", ft_strchr(str, c));
-// 	printf("la fonction de base retourne %s\n", strchr(str, c));
+// 	printf("le pointeur retourné à cette adresse : %p\n", ft_strchr(str, c));
 // }
 
 // int	main(void)

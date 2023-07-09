@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+static void	freeall(char **tab)
+{
+	while(*tab)
+	{
+		free(*tab);
+		tab++;
+	}
+	free(tab);
+}
+
 static int	count_substr(char const *s, char c)
 {
 	int	i;
@@ -49,10 +59,13 @@ static void	extract_and_fill(char **tab, char const *s, char c)
 		if (s > tmp || *s == c)
 		{
 			*ptab = ft_substr(tmp, 0, s - tmp);
+			if (!*ptab)
+				freeall(tab);
 			tmp = s;
 			ptab++;
 		}
 	}
+	*ptab = NULL;
 }
 
 char	**ft_split(char const *s, char c)
@@ -67,18 +80,28 @@ char	**ft_split(char const *s, char c)
 	if (!tab)
 		return (NULL);
 	extract_and_fill(tab, s, c);
-	tab[size + 1] = NULL;
+	if(!tab)
+		return (NULL);
 	return (tab);
 }
 
 // int	main(void)
 // {
-// 	char *s = "";
-// 	char c = 'z';
+// 	char *s = "un beau matin tout ça ne vaudra plus rien";
+// 	char c = ' ';
 // 	char **tab = ft_split(s, c);
 // 	int i = 0;
-// 	while (tab[i])
-// 		printf("%s\n", tab[i++]);
-// 	if (!tab[0])
+// 	if (!*tab)
 // 		printf("NULL\n");
+// 	while (*tab)
+// 	{
+// 		printf("%s\n", *tab);
+// 		tab++;
+// 	}
+// 	while(tab[i])
+// 	{
+// 		free(tab[i]);
+// 		i++;
+// 	}
+// 	free(tab);
 // }
