@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 22:45:32 by u4s2e0r           #+#    #+#             */
-/*   Updated: 2023/06/30 21:07:11 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/10 18:29:41 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void    *ft_memmove(void *dest, const void *src, size_t n)
 {
+	
+	if(!dest || !src)
+		return (NULL);
 	if (dest > src)
 	{
 		while(n--)
@@ -28,6 +31,12 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+int	main(void)
+{
+	printf("ft_memmove retourne : %s\n", (char *)ft_memmove(NULL, NULL, 3));
+}
+
 
 //  int	main(void)
 //  {

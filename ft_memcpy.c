@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 19:26:46 by pmateo            #+#    #+#             */
-/*   Updated: 2023/06/28 23:01:47 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/10 19:22:27 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*psrc;
 	size_t				i;
 
+	if(!dest || !src)
+		return (NULL);
 	pdest = (unsigned char *)dest;
 	psrc = (const unsigned char *)src;
 	i = 0;
@@ -29,13 +31,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*int	main(void)
-{
-	char dest[25] = "";
-	char *src = "t'es un gros pd";
-	ft_memcpy(dest, src, 25);
-	printf("%s\n", dest);
-	memcpy(dest, src, 25);
-	printf("dest est maintenant : %s\n", dest);
- 		
-}*/
+// int	main(void)
+// {
+// 	printf("ma fonction renvoie : %s\n", (char *)ft_memcpy(NULL, NULL, 3));
+// 	printf("la fonction de base renvoie : %s\n", (char *)memcpy(NULL, NULL, 3));
+// }

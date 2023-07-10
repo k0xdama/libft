@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 14:34:17 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/02 22:17:29 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/10 15:47:50 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,38 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	while(lst)
 	{
 		(*f)(lst->content);
-		*lst = *lst->next;
+		lst = lst->next;
 	}
 }
+
+// void	addOne(void *content)
+// {
+// 	*(int *)content += 1;
+// }
+
+// void	ft_lstprint(t_list *lst)
+// {
+// 	while(lst)
+// 	{
+// 		printf("&cell = %p\n", lst);
+// 		// % A CHANGER SELON LE TYPE DE DONNEES
+// 		printf("content_cell = %d\n", *((int *)lst->content));
+// 		printf("&next_cell = %p\n", lst->next);
+// 		printf("|\n|\n|\n");
+// 		lst = lst->next;
+// 	}
+// 	printf("&cell = NULL\n");
+// 	printf("content_cell = NULL\n");
+// 	printf("&next_cell = NULL\n");
+// }
+
+// int	main(void)
+// {
+// 	t_list *lst = NULL;
+// 	int *content1 = malloc(sizeof(int));
+// 	*content1 = 2;
+// 	t_list *cell1 = ft_lstnew(content1);
+// 	ft_lstadd_front(&lst, cell1);
+// 	ft_lstiter(lst, addOne);
+// 	ft_lstprint(lst);
+// }

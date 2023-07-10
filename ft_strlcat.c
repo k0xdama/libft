@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 02:19:29 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/02 21:15:03 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/10 19:26:37 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
+	if(!dest || !src)
+		return ((size_t)NULL);
 	while (dest[i] != '\0')
 		i++;
 	ldest = i;
@@ -40,8 +42,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 // int	main(void)
 // {
-// 	// char *src = "AAAAAAAAA";
-// 	char dest[30];
+// 	char	*dest;
+// 	dest = malloc(sizeof(*dest) * 15);
 // 	ft_memset(dest, 0, 15);
 // 	ft_memset(dest, 'r', 15);
 // 	printf("ma fonction renvoie %ld\n", ft_strlcat(dest, "lorem ipsum dolor sit amet", 5));

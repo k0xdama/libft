@@ -6,7 +6,7 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 18:41:27 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/01 20:28:55 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/07/10 19:23:17 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ char    *ft_strnstr(const char *str, const char *tofind, size_t n)
 
 	i = 0;
 	j = 0;
+	if(!str || !tofind)
+		return (NULL);
 	if(!tofind || !tofind[0])
 		return ((char *)str);
 	while (str[i] != '\0' && i < n)
 	{
-		if (str[i + j] == tofind[j] && i + j < n)
+		while (str[i + j] == tofind[j] && i + j < n && str[i + j] && tofind[j])
 			j++;
-		else if (tofind[j] == '\0')
+		if (tofind[j] == '\0')
 			return ((char *)str + i);
 		else
 		{
