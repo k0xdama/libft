@@ -6,16 +6,16 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 22:35:52 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/01 17:26:32 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 void	*ft_memchr(const void *mb, int c, size_t n)
 {
 	const char	*pmb;
-	size_t				i;
+	size_t		i;
 
 	i = 0;
 	pmb = (const char *)mb;

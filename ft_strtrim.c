@@ -6,11 +6,11 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 20:13:42 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/01 22:47:17 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 static char	*cpy(char const *src, int start, int end)
 {
@@ -36,8 +36,8 @@ static char	*cpy(char const *src, int start, int end)
 static int	find_start(const char *s1, const char *set)
 {
 	int	i;
-	int j;
-	
+	int	j;
+
 	i = 0;
 	j = 0;
 	while (set[j] != '\0')
@@ -62,7 +62,7 @@ static int	find_end(const char *s1, const char *set, int start, int lens1)
 	j = 0;
 	while (set[j] != '\0' && start < i)
 	{
-		if(s1[i] == set[j])
+		if (s1[i] == set[j])
 		{
 			j = 0;
 			i--;

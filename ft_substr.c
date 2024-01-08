@@ -6,11 +6,11 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 10:54:57 by u4s2e0r           #+#    #+#             */
-/*   Updated: 2023/07/02 19:07:06 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 // size_t	ft_strlen(const char *str)
 // {
@@ -42,9 +42,9 @@ char	*ft_substr(const char *src, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	strlen;
-	
+
 	if (!src)
-		return(NULL);
+		return (NULL);
 	if (start > ft_strlen(src))
 	{
 		str = malloc(sizeof(char));

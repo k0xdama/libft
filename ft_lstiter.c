@@ -6,15 +6,15 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 14:34:17 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/10 15:47:50 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while(lst)
+	while (lst)
 	{
 		(*f)(lst->content);
 		lst = lst->next;

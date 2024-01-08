@@ -6,11 +6,11 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 02:56:20 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/02 21:25:57 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 static void	reversestr(char *str, int len)
 {
@@ -32,9 +32,9 @@ static void	reversestr(char *str, int len)
 
 static void	fill(char *str, long ln, int n)
 {
-	int digit;
+	int	digit;
 	int	i;
-	
+
 	i = 0;
 	if (ln == 0)
 		str[0] = '0';
@@ -52,10 +52,9 @@ static void	fill(char *str, long ln, int n)
 static int	digit_count(long ln)
 {
 	int	count;
-	
-	count = 0;
 
-	if(ln == 0)
+	count = 0;
+	if (ln == 0)
 		count = 1;
 	while (ln)
 	{

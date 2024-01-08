@@ -6,11 +6,11 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 19:26:46 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/10 19:22:27 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -18,8 +18,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*psrc;
 	size_t				i;
 
-	if(!dest || !src)
+	if (!dest)
 		return (NULL);
+	if (!src)
+		return (dest);
 	pdest = (unsigned char *)dest;
 	psrc = (const unsigned char *)src;
 	i = 0;
@@ -30,6 +32,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+// int	main(void)
+// {
+// 	char dest[100];
+// 	ft_memset(dest, 'A', 100);
+// 	ft_memcpy(dest, "coucou", 0);
+// 	char *rtn = (char *)ft_memcpy(dest, NULL, 0);
+// 	printf("%s\n", dest);
+// 	printf("%s\n", rtn);
+// }
 
 // int	main(void)
 // {

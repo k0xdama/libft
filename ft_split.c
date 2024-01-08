@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 static void	freeall(char **tab)
 {
-	while(*tab)
+	while (*tab)
 	{
 		free(*tab);
 		tab++;
@@ -29,7 +29,7 @@ static int	count_substr(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0'))
 		{
@@ -44,8 +44,8 @@ static int	count_substr(char const *s, char c)
 
 static void	extract_and_fill(char **tab, char const *s, char c)
 {
-	char **ptab;
-	char const *tmp;
+	char		**ptab;
+	char const	*tmp;
 
 	ptab = tab;
 	tmp = s;
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 	if (!tab)
 		return (NULL);
 	extract_and_fill(tab, s, c);
-	if(!tab)
+	if (!tab)
 		return (NULL);
 	return (tab);
 }

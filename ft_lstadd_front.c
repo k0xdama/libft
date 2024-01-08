@@ -6,11 +6,11 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 20:35:41 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/09 20:58:54 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
@@ -45,7 +45,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 	*content1 = 42;
 // 	*content2 = 66;
 // 	*content3 = 314;
-	
 // 	cell1 = ft_lstnew(content1);
 // 	cell2 =	ft_lstnew(content2);
 // 	cell3 = ft_lstnew(content3);

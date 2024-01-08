@@ -6,16 +6,16 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 20:59:14 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/10 13:57:29 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
 	int	len;
-	
+
 	len = 0;
 	while (lst)
 	{
@@ -50,7 +50,6 @@ int	ft_lstsize(t_list *lst)
 // 	int	*content1 = malloc(sizeof(int));
 // 	int	*content2 = malloc(sizeof(int));
 // 	int	*content3 = malloc(sizeof(int));
-	
 // 	*content1 = 42;
 // 	*content2 = 13;
 // 	*content3 = 12;

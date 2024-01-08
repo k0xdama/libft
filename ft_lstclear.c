@@ -6,11 +6,11 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 13:08:36 by pmateo            #+#    #+#             */
-/*   Updated: 2023/07/10 14:52:55 by pmateo           ###   ########.fr       */
+/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "INCLUDES/libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
@@ -49,7 +49,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 // 	t_list	*cell2;
 // 	t_list	*cell3;
 // 	t_list	*cell4;
-	
 // 	int	*content1 = malloc(sizeof(int));
 // 	int	*content2 = malloc(sizeof(int));
 // 	int	*content3 = malloc(sizeof(int));
