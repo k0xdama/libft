@@ -6,16 +6,16 @@
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 05:35:19 by pmateo            #+#    #+#             */
-/*   Updated: 2023/12/20 15:48:28 by pmateo           ###   ########.fr       */
+/*   Updated: 2024/03/24 01:53:11 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "INCLUDES/libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int	i;
-	int	result;
+	long	result;
 	int	sign;
 
 	i = 0;
