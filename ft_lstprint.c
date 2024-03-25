@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 20:48:09 by pmateo            #+#    #+#             */
-/*   Updated: 2024/03/25 02:52:41 by pmateo           ###   ########.fr       */
+/*   Created: 2024/03/25 02:52:47 by pmateo            #+#    #+#             */
+/*   Updated: 2024/03/25 02:53:24 by pmateo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "INCLUDES/libft.h"
 
-int	ft_isdigit(int c)
+void	ft_lstprint(t_list *lst)
 {
-	if (c > 47 && c < 58)
-		return (2048);
-	else
-		return (0);
+	while(lst)
+	{
+		printf("&cell = %p\n", lst);
+		// % A CHANGER SELON LE TYPE DE DONNEES
+		printf("content_cell = %d\n", *((int *)lst->content));
+		printf("&next_cell = %p\n", lst->next);
+		printf("|\n|\n|\n");
+		lst = lst->next;
+	}
+	printf("&cell = NULL\n");
+	printf("content_cell = NULL\n");
+	printf("&next_cell = NULL\n");
 }

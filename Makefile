@@ -6,7 +6,7 @@
 #    By: pmateo <pmateo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/27 22:38:51 by pmateo            #+#    #+#              #
-#    Updated: 2024/01/08 16:20:01 by pmateo           ###   ########.fr        #
+#    Updated: 2024/03/25 02:57:49 by pmateo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ CC     = cc
 CFLAGS = -Wall -Werror -Wextra
 AR     = ar rcs
 RM	   = rm -f
+.DEFAULT_GOAL := all
 
 SRC    = 	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memset.c \
@@ -26,7 +27,7 @@ SRC    = 	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit
 			 
 
 BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c 
+			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstprint.c
 
 OBJ    = ${SRC:.c=.o}
 
@@ -40,7 +41,7 @@ ${NAME}: ${OBJ}
 bonus: ${OBJ_BONUS}
 	${AR} ${NAME} ${OBJ_BONUS}
 
-all: ${NAME}
+all: ${NAME} bonus
 
 clean: 
 	${RM} ${OBJ} ${OBJ_BONUS}
